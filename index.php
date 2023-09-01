@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <title>UTN</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
     </div> -->
 
     <div class="buscar">
-        <a href="">Sedes</a>
-        <a href="">Carreras</a>
-        <a href="">Estudiantes</a>
-        <a href="">Profesores</a>
+        <a href="sedes.php">Sedes</a>
+        <a href="carreras.php">Carreras</a>
+        <a href="tablaEstudiantes.php">Estudiantes</a>
+        <a href="tablaProfesores.php">Profesores</a>
     </div>
 
     <style>

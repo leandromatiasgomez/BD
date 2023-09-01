@@ -8,7 +8,7 @@
     <form action="login.php" method="post">
         <input type="text" name="nombre" placeholder="Nombre">
         <input type="text" name="apellido" placeholder="Apellido">
-        <input type="password" name="password" placeholder="Constraseña">
+        <input type="password" name="password" placeholder="DNI">
 
         <input type="submit" value="Send">
     </form>
@@ -27,7 +27,7 @@
     if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['password'])){
 
         $record = $conn->prepare('SELECT * FROM empleados WHERE nombre=:nombre');
-        $record->bindParam(':nobmre', $_POST['nombre']);
+        $record->bindParam(':nombre', $_POST['nombre']);
         $record->execute();
         $result = $record-> fetch(PDO::FETCH_ASSOC);
 
@@ -38,7 +38,7 @@
             header('location: /BD');
         }
         else{
-            $menssage = 'los datos no coiciden';
+            $menssage = 'los datos no coinciden';
         }
     }
 ?>
