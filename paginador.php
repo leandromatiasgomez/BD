@@ -6,7 +6,7 @@
 
     $inicio = ($pagina>1) ? (($pagina * $regPagina)-$regPagina) : 0;
 
-    $registros = $conn->prepare("SELECT SQL_CALC_FOUND_ROW * FROM alumnos LIMIT $inicio, $regPagina");
+    $registros = $conn->prepare("SELECT SQL_CALC_FOUND_ROW * FROM sedes LIMIT $inicio, $regPagina");
 
     $registros->execute();
     $registros=$registros->fecthAll();
