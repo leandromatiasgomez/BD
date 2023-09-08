@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="styles/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap.css">
 
+<?php
+    include "database.php";
+    include "paginador.php";
+?>
 
 <div style="width:75%; margin-left:auto; margin-right:auto; margin-top:2%;">
 <table class="table">
