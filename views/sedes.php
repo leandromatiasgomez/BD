@@ -1,9 +1,6 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 
-<?php
-    include "database.php";
-    include "paginador.php";
-?>
+
 
 <div style="width:75%; margin-left:auto; margin-right:auto; margin-top:2%;">
 <table class="table">
@@ -19,14 +16,14 @@
   <tbody>
     <?php
       if($totalRegistros >= 1):
-      foreach($regsitros as $reg):
+      foreach($registros as $reg):
     ?>
     <tr>
       <th scope="row"><?php echo $reg['id']; ?></th>
       <td><?php echo $reg['nombre']; ?></td>
-      <td><?php echo $reg['provincia']; ?></td>
-      <td><? echo $reg['localidad']; ?></td>
-      <td><? echo $reg['direccion']; ?></td>
+      <td><?php echo $reg['Provincia']; ?></td>
+      <td><? echo $reg['Localidad']; ?></td>
+      <td><? echo $reg['Direccion']; ?></td>
     </tr>
     <?php
       endforeach;
@@ -66,7 +63,7 @@
           echo'<li><a href="lista.php?pagina='.$i.'">'.$i.'</a></li>';
         }
       }
-
+      
       if($pagina == $numeroPaginas):
     ?>
     <li class="page-item">

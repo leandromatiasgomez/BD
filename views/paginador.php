@@ -14,6 +14,6 @@
     $totalRegistros = $conn-> query("SELECT FOUND_ROW() as total");
     $totalRegistros = $totalRegistros->fecth()['total'];
 
-    $numeroPaginas = ceil($totalRegistros * $regPagina);
+    $numeroPaginas = ceil($totalRegistros / $regPagina);
 
 ?>

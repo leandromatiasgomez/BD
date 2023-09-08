@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="styles/bootstrap.css">
-<?php
-    include "database.php";
-    include "paginador.php";
-?>
+
 <table class="table">
   <thead class="thead-dark">
     <tr>

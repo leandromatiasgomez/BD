@@ -1,58 +1,83 @@
 <link rel="stylesheet" href="styles/bootstrap.css">
 
 <?
-    include "database.php";
     include "paginador.php";
 ?>
 
+<div style="width:75%; margin-left:auto; margin-right:auto; margin-top:2%;">
 <table class="table">
-  <thead>
+  <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">dni</th>
+      <th scope="col" style="background:black; color:white;">#</th>
+      <th scope="col" style="background:black; color:white;">Nombre</th>
+      <th scope="col" style="background:black; color:white;">Apellido</th>
+      <th scope="col" style="background:black; color:white;">DNI</th>
     </tr>
   </thead>
   <tbody>
-    <?php 
-        if($totalRegistros >= 1)
-            foreach($registros as $reg):
+    <?php
+      if($totalRegistros >= 1):
+      foreach($regsitros as $reg):
     ?>
     <tr>
       <th scope="row"><?php echo $reg['id']; ?></th>
       <td><?php echo $reg['nombre']; ?></td>
-      <td><?php echo $reg['apellido']; ?></td>
-      <td><?php echo $reg['dni']; ?></td>
+      <td><?php echo $reg['Provincia']; ?></td>
+      <td><? echo $reg['dni']; ?></td>
     </tr>
     <?php
-        endforeach; 
-        else: 
+      endforeach;
+      else:
     ?>
     <tr>
-        <th><?php echo "No hay registros";?></th>
+      <td><?php echo "No hay registros";?></td>
     </tr>
-    <?php endif;?>
+    <?php
+      endif;
+    ?>
   </tbody>
 </table>
 
-<?php if($totalRegistros >= 1)?>
+<?php if($totalRegistros >= 1): ?>
 <nav aria-label="Page navigation example">
   <ul class="pagination">
+    <?php if($pagina==1):?>
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <?php else:?>
+      <li class="page-item">
+        <a class="page-link" href="lista.php?pagina=<?php echo $pagina - 1?>" >
+          <span>&laquo;</span>
+        </a>
+      </li>
+    <?php 
+      endif;
+      for($i=0; $i<$numeroPaginas; $i++){
+        if($pagina == $i){
+          echo'<li><a href="lista.php?pagina='.$i.'">'.$i.'</a></li>';
+        }
+        else{
+          echo'<li><a href="lista.php?pagina='.$i.'">'.$i.'</a></li>';
+        }
+      }
+
+      if($pagina == $numeroPaginas):
+    ?>
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
       </a>
     </li>
+    <?php else: ?>
+    <li>
+      <a href="lista.php?pagina=<?php echo $pagina + 1?>">&raquo;</a>
+    </li>
+    <?php endif;?>
   </ul>
 </nav>
+<?php endif;?>
+</div>
+

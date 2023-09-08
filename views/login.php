@@ -35,7 +35,7 @@
 
         if(count($result) > 0 && password_verify($_POST['password'], $result['password'])){
             $_SESSION['user_id']=$result['id'];
-            header('location: /BD');
+            header('location: /BD/index.php');
         }
         else{
             $menssage = 'los datos no coinciden';
