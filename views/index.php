@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>UTN</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
 <body>
 
-    </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<link href="css/style.css" rel="stylesheet">
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/utn1.jpg" class="d-block w-100" alt="...">
+      <img src="img/utn1.jpg" class="d-block w-100"  height="600">
     </div>
     <div class="carousel-item">
-      <img src="img/utn2.jpg" class="d-block w-100" alt="...">
+      <img src="img/utn2.jpg" class="d-block w-100" height="600">
     </div>
     <div class="carousel-item">
-      <img src="img/utn3.png" class="d-block w-100" alt="...">
+      <img src="img/utn3.png" class="d-block w-100" height="600">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Anterior</span>
+    <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Siguiente</span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <div>
   
 </div>
