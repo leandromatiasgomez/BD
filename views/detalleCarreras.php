@@ -4,7 +4,7 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th>Materia</th>   
+                <th>Materias</th>   
             </tr>
         </thead>
         <tbody>
