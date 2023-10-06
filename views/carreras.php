@@ -12,9 +12,9 @@
         <tbody>
             <?php foreach($listaCarreras as $carrera){?>
                 <tr>
-                    <th><?php $carrera['codigo_carrera'];?></th>
-                    <th><a href="detallesCarerras.php?id=<?php echo $carrera ['codigo_carrera']?>" styles="text-decoration: none; color:#495057;"><?php $carrera['Nombre'];?></a></th>
-                    <th><?php $carrera['codigo_tipo_carrera'];?></th>
+                    <th><?php echo $carrera['codigo_carrera'];?></th>
+                    <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombre'];?></a></th>
+                    <th><?php echo $carrera['nombre'];?></th>
                 </tr>
             <?php }?>
         </tbody>

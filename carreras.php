@@ -1,7 +1,7 @@
 <?php
     require_once "include/config.php";
 
-    $sql = "SELECT * FROM carreras";
+    $sql = "SELECT * FROM carreras INNER JOIN tipocarreras ON carreras.codigo_tipo_carrera = tipocarreras.codigo_tipo_carrera";
     $res = mysqli_query($conn, $sql);
 
     if(!$res){

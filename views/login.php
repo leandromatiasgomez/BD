@@ -18,28 +18,35 @@
 
     session_start();
 
-    if(isset($_SESSION['user_id'])){
-        header('location: /BD');
+    if(isset($_SESSION['codigo_empleado'])){
+        header('location: /index.php');
     }
 
-    require 'database.php';
+    require 'include/config.php';
 
     if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['password'])){
 
-        $record = $conn->prepare('SELECT * FROM empleados WHERE nombre=:nombre');
-        $record->bindParam(':nombre', $_POST['nombre']);
-        $record->execute();
-        $result = $record-> fetch(PDO::FETCH_ASSOC);
+        $records = $conn->prepare('SELECT * FROM empleados WHERE nombre=:nombre');
+        $records->bindParam(':email', $_POST['email']);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
 
         $menssage='';
 
-        if(count($result) > 0 && password_verify($_POST['password'], $result['password'])){
-            $_SESSION['user_id']=$result['id'];
-            header('location: /BD/index.php');
+        if(count($results) > 0 && password_verify($_POST['password'], $results['password'])){
+            $_SESSION['codigo_empleado']=$results['codigo_empleado'];
+            header('location: /index.php');
         }
         else{
-            $menssage = 'los datos no coinciden';
+            $menssage = 'Los datos no coinciden';
         }
-    }
-?>
 
+    //     if(count($result) > 0 && password_verify($_POST['password'], $result['password'])){
+    //         $_SESSION['user_id']=$result['id'];
+    //         header('location: /BD/index.php');
+    //     }
+    //     else{
+    //         $menssage = 'los datos no coinciden';
+    //     }
+        }
+?>
