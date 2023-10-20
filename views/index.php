@@ -7,41 +7,51 @@
     <title>UTN</title>
     <link rel="stylesheet" href="styles/bootstrap.css">
 </head>
-<body>
+  <body>
 
-<link href="css/style.css" rel="stylesheet">
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/utn1.jpg" class="d-block w-100"  height="600">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/utn1.jpg" class="d-block w-100"  height="600">
+        </div>
+        <div class="carousel-item">
+          <img src="img/utn2.jpg" class="d-block w-100" height="600">
+        </div>
+        <div class="carousel-item">
+          <img src="img/utn3.png" class="d-block w-100" height="600">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <img src="img/utn2.jpg" class="d-block w-100" height="600">
+    <div>
+      <?php if(isset($_SESSION['codigo_empleado'])) : ?>
+        <a href="logout">cerrar sesión</a>
+      <?php 
+        endif;
+        if(!isset($_SESSION['codigo_empleado'])) : 
+      ?>
+        <div class="btn" style="background: #3D464D; margin-top:1%; margin-left:1%;">
+          <a href="login.php" style="text-decoration:none; color:white;">Administrar</a>
+        </div>         
+      <?php endif; ?>
     </div>
-    <div class="carousel-item">
-      <img src="img/utn3.png" class="d-block w-100" height="600">
+
+    <div class="container" style="margin-top:3%; margin-bottom:3%;">
+      <div style="display:flex;">
+        <a href=""><img src="img/utn1.jpg" class="d-block w-100"  height="300"></a>
+        <a href=""><img src="img/utn2.jpg" class="d-block w-100" height="300"></a>
+      </div>
+      <a href=""><img src="img/utn3.png" class="d-block w-100" height="400"></a>      
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div>
-  <?php if(isset($_SESSION['codigo_empleado'])) : ?>
-    <a href="logout">cerrar sesión</a>
-  <?php 
-    endif;
-    if(!isset($_SESSION['codigo_empleado'])) : 
-  ?>
-        <a href="login.php" style="text-decoration:none; color:black;">Administrar</a>
-  <?php endif; ?>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>
 

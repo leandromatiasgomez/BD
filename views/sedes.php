@@ -15,7 +15,7 @@
       <?php foreach($listaSedes as $sedes){ ?>
         <tr>
           <th><?php echo $sedes['codigo_sede'];?></th>
-          <th><a href="detallesSedes.php?id=<?php echo $sedes['codigo_sede']?>" style="text-decoration: none; color:#495057;"><?php echo $sedes['nombre'];?></a></th>
+          <th><a href="detallesSedes.php?id=<?php echo $sedes['codigo_sede']?>" style="text-decoration: none; color:#495057;"><?php echo $sedes['nombreSede'];?></a></th>
           <th><?php echo $sedes['Provincia'];?></th>
           <th><?php echo $sedes['Localidad'];?></th>
           <th><?php echo $sedes['Direccion'];?></th>

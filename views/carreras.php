@@ -13,8 +13,8 @@
             <?php foreach($listaCarreras as $carrera){?>
                 <tr>
                     <th><?php echo $carrera['codigo_carrera'];?></th>
-                    <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombre'];?></a></th>
-                    <th><?php echo $carrera['nombre'];?></th>
+                    <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombreCarrera'];?></a></th>
+                    <th><?php echo $carrera['nombreGrado'];?></th>
                 </tr>
             <?php }?>
         </tbody>

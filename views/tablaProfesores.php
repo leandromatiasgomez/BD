@@ -14,9 +14,9 @@
     <?php foreach($listaProfesores as $profesores) {?>
       <tr>
         <th><?php echo $profesores['codigo_empleado'];?></th>
-        <th><?php echo $profesores['nombre']?></th>
-        <th><?php echo $profesores['apellido']?></th>
-        <th><?php echo $profesores['DNI']?></th>
+        <th><?php echo $profesores['nombreEmpleado']?></th>
+        <th><?php echo $profesores['apellidoEmpleado']?></th>
+        <th><?php echo $profesores['dniEmpleado']?></th>
       </tr>
     <?php }?>
   </tbody>

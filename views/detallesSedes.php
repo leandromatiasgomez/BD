@@ -6,13 +6,14 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Carrera</th>
-                    <th>Tipo de carrera</th>
+                    <th>Grado de carrera</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach($listaCarreras as $carrera){?>
                     <tr>
-                        <th><a href="detallesCarreras.php"><?php echo $carrera['nombre'];?></a></th>
+                        <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombreCarrera'];?></a></th>
+                        <th><?php echo $carrera['nombreGrado']?></th>
                     </tr>
                 <?php }?>
             </tbody>
@@ -23,15 +24,17 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th>Materia</th>
-                    <th>Profesor</th>
+                    <th>Numero de aula</th>
+                    <th>Profesor/a</th>
+                    <th>Materia</th>          
                 </tr>
             </thead>
             <tbody>
                 <?php foreach($listaAulas as $aula){?>
                     <tr>
-                        <th><?php echo $aula['nombre'];?></th>
-                        <th><?php echo $aula['Nombre'];?></th>
+                        <th><?php echo $aula['numero_aula']?></th>
+                        <th><?php echo $aula['apellidoEmpleado'];?><?php echo " " ?><?php echo $aula['nombreEmpleado'];?></th>
+                        <th><?php echo $aula['nombreMateria'];?></th>                       
                     </tr>
                 <?php }?>
             </tbody>
@@ -50,9 +53,9 @@
             <tbody>
                 <?php foreach($listaAlumnos as $alumno){?>
                     <tr>
-                        <th><?php echo $alumno['matricula'];?></th>
-                        <th><?php echo $alumno['nombre'];?></th>
-                        <th><?php echo $alumno['codigo_tipo_carrera'];?></th>
+                        <th><?php echo $alumno['Matricula'];?></th>
+                        <th><?php echo $alumno['nombreAlumno'];?></th>
+                        <th><?php echo $alumno['apellidoAlumno'];?></th>
                     </tr>
                 <?php }?>
             </tbody>

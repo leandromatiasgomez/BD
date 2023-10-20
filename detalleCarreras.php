@@ -11,5 +11,5 @@
     $listaMaterias = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
     require_once "views/layout.php";
-    require_once "views/detalleCarreras.php";
+    require_once "views/detallesCarreras.php";
 ?>

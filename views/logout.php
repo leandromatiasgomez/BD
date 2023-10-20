@@ -6,6 +6,6 @@
 
     session_destroy();
 
-    header('location: /BD/views/index.php');
+    header('location: /BD/index.php');
 
 ?>

@@ -5,7 +5,7 @@
   session_start();
 
   if(isset($_SESSION['codigo_empleado'])){
-    header('location: /index.php');
+    header('location: /BD/index.php');
   }
 
 ?>
@@ -24,9 +24,9 @@
       <?php foreach($listaAlumnos as $alumno) {?>
         <tr>
           <th><?php echo $alumno['Matricula'];?></th>
-          <th><?php echo $alumno['Nombre'];?></th>
-          <th><?php echo $alumno['Apellido'];?></th>
-          <th><?php echo $alumno['DNI']?></th>
+          <th><?php echo $alumno['nombreAlumno'];?></th>
+          <th><?php echo $alumno['apellidoAlumno'];?></th>
+          <th><?php echo $alumno['dniAlumno']?></th>
         </tr>
       <?php }?>
     </tbody>
