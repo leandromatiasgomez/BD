@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="styles/bootstrap.css">
+<link rel="stylesheet" href="styles/styleBD.css">
 
 <div style="width:75%; margin-left:auto; margin-right:auto; margin-top:2%;">
     <table class="table">
-        <thead class="thead-dark">
+        <thead>
             <tr>
                 <th>#</th>
-                <th>Carrera</th>
-                <th>Tipo de carrera</th>
+                <th class="encabezado">Carrera</th>
+                <th class="encabezado">Tipo de carrera</th>
             </tr>
         </thead>
         <tbody>
