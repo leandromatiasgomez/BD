@@ -11,5 +11,5 @@
     $listaAlumnos = mysqli_fetch_all($res, MYSQLI_ASSOC);
 
     require_once "views/layout.php";
-    require_once "views/tablaAlumnos.php";
+    require_once "views/alumnos.php";
 ?>

@@ -23,10 +23,10 @@
     <tbody>
       <?php foreach($listaAlumnos as $alumno) {?>
         <tr>
-          <th><?php echo $alumno['Matricula'];?></th>
-          <th><?php echo $alumno['nombreAlumno'];?></th>
-          <th><?php echo $alumno['apellidoAlumno'];?></th>
-          <th><?php echo $alumno['dniAlumno']?></th>
+          <th><?php echo $alumno['matricula'];?></th>
+          <th><?php echo $alumno['nombre_alumno'];?></th>
+          <th><?php echo $alumno['apellido_alumno'];?></th>
+          <th><?php echo $alumno['dni_alumno']?></th>
         </tr>
       <?php }?>
     </tbody>

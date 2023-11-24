@@ -4,7 +4,6 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col" style="background:black; color:white;">#</th>
       <th scope="col" style="background:black; color:white;">Nombre</th>
       <th scope="col" style="background:black; color:white;">Apellido</th>
       <th scope="col" style="background:black; color:white;">DNI</th>
@@ -13,10 +12,9 @@
   <tbody>
     <?php foreach($listaProfesores as $profesores) {?>
       <tr>
-        <th><?php echo $profesores['codigo_empleado'];?></th>
-        <th><?php echo $profesores['nombreEmpleado']?></th>
-        <th><?php echo $profesores['apellidoEmpleado']?></th>
-        <th><?php echo $profesores['dniEmpleado']?></th>
+        <th><?php echo $profesores['nombre_empleado']?></th>
+        <th><?php echo $profesores['apellido_empleado']?></th>
+        <th><?php echo $profesores['dni_empleado']?></th>
       </tr>
     <?php }?>
   </tbody>

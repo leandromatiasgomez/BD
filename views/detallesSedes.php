@@ -12,8 +12,8 @@
             <tbody>
                 <?php foreach($listaCarreras as $carrera){?>
                     <tr>
-                        <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombreCarrera'];?></a></th>
-                        <th><?php echo $carrera['nombreGrado']?></th>
+                        <th><a href="detallesCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombre_carrera'];?></a></th>
+                        <th><?php echo $carrera['nombre_tipo_carrera']?></th>
                     </tr>
                 <?php }?>
             </tbody>
@@ -33,8 +33,8 @@
                 <?php foreach($listaAulas as $aula){?>
                     <tr>
                         <th><?php echo $aula['numero_aula']?></th>
-                        <th><?php echo $aula['apellidoEmpleado'];?><?php echo " " ?><?php echo $aula['nombreEmpleado'];?></th>
-                        <th><?php echo $aula['nombreMateria'];?></th>                       
+                        <th><?php echo $aula['apellido_empleado'];?><?php echo " " ?><?php echo $aula['nombre_empleado'];?></th>
+                        <th><?php echo $aula['nombre_materia'];?></th>                       
                     </tr>
                 <?php }?>
             </tbody>
@@ -53,9 +53,9 @@
             <tbody>
                 <?php foreach($listaAlumnos as $alumno){?>
                     <tr>
-                        <th><?php echo $alumno['Matricula'];?></th>
-                        <th><?php echo $alumno['nombreAlumno'];?></th>
-                        <th><?php echo $alumno['apellidoAlumno'];?></th>
+                        <th><?php echo $alumno['matricula'];?></th>
+                        <th><?php echo $alumno['nombre_alumno'];?></th>
+                        <th><?php echo $alumno['apellido_alumno'];?></th>
                     </tr>
                 <?php }?>
             </tbody>

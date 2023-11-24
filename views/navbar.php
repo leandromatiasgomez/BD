@@ -5,7 +5,7 @@
     <div class="buscar" style="display:flex; margin-right:5%;">
         <a href="sedes.php" style="color: #fff; margin-right:5%;"class="nav-link">Sedes</a>
         <a href="carreras.php" style="color:#fff; margin-right:5%;" class="nav-link">Carreras</a>
-        <a href="tablaAlumnos.php" style="color:#fff; margin-right:5%;" class="nav-link">Estudiantes</a>
-        <a href="tablaProfesores.php" style="color:#fff; margin-right:5%;" class="nav-link">Profesores</a>
+        <a href="alumnos.php" style="color:#fff; margin-right:5%;" class="nav-link">Estudiantes</a>
+        <a href="profesores.php" style="color:#fff; margin-right:5%;" class="nav-link">Profesores</a>
     </div>
 </div>

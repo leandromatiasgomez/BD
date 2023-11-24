@@ -1,3 +1,19 @@
+<?php
+  session_start();
+
+  // if(isset($_SESSION['user_id'])){
+  //   $records = $conn->prepare('SELECT * FROM empleados WHERE codigo_empleados = :id');
+  //   $records->bindParam(':id', $_SESSION['user_id']);
+  //   $records = $records->fetch(PDO::FETCH_ASSOC);
+
+  //   $user = null;
+
+  //   if(count($results) > 0){
+  //     $user = $results;
+  //   }
+  // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,12 +46,15 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <div>
-      <?php if(isset($_SESSION['codigo_empleado'])) : ?>
-        <a href="logout">cerrar sesión</a>
+      <?php if(empty($user)) : ?>
+        <div class="btn" style="background: #3D464D; margin-top:1%; margin-left:1%;">
+          <a href="views/logout.php" style="text-decoration:none; color:white;">cerrar sesión</a>
+        </div>
       <?php 
         endif;
-        if(!isset($_SESSION['codigo_empleado'])) : 
+        if(!empty($user)) : 
       ?>
         <div class="btn" style="background: #3D464D; margin-top:1%; margin-left:1%;">
           <a href="login.php" style="text-decoration:none; color:white;">Administrar</a>

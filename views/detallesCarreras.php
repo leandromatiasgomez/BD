@@ -10,7 +10,7 @@
         <tbody>
             <?php foreach($listaMaterias as $materia) {?>
                 <tr>
-                    <th><?php echo $materia['nombreMateria'];?></th>
+                    <th><?php echo $materia['nombre_materia'];?></th>
                 </tr>
             <?php } ?>
         </tbody>
