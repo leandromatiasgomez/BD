@@ -12,7 +12,7 @@
             <tbody>
                 <?php foreach($listaCarreras as $carrera){?>
                     <tr>
-                        <th><a href="detallesCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#495057;"><?php echo $carrera['nombre_carrera'];?></a></th>
+                        <th><a href="detalleCarreras.php?id=<?php echo $carrera ['codigo_carrera']?>" style="text-decoration: none; color:#212529;"><?php echo $carrera['nombre_carrera'];?></a></th>
                         <th><?php echo $carrera['nombre_tipo_carrera']?></th>
                     </tr>
                 <?php }?>
