@@ -5,7 +5,7 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col" style="background:black; color:white;">#</th>
-        <th scope="col" style="background:black; color:white;">Nombre</th>
+        <th scope="col" style="background:black; color:white;">Nombre (Hacer click para más información)</th>
         <th scope="col" style="background:black; color:white;">Provincia</th>
         <th scope="col" style="background:black; color:white;">Localidad</th>
         <th scope="col" style="background:black; color:white;">Direccion</th>

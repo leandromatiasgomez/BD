@@ -16,7 +16,7 @@
         <th><?php echo $profesores['apellido_empleado']?></th>
         <th><?php echo $profesores['dni_empleado']?></th>
       </tr>
-    <?php }?>
+    <?php } ?>
   </tbody>
 </table>
 

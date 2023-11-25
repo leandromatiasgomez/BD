@@ -1,17 +1,17 @@
 <?php
   session_start();
 
-  // if(isset($_SESSION['user_id'])){
-  //   $records = $conn->prepare('SELECT * FROM empleados WHERE codigo_empleados = :id');
-  //   $records->bindParam(':id', $_SESSION['user_id']);
-  //   $records = $records->fetch(PDO::FETCH_ASSOC);
+  if(isset($_SESSION['user_id'])){
+    $records = $conn->prepare('SELECT * FROM empleados WHERE codigo_empleados = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records = $records->fetch(PDO::FETCH_ASSOC);
 
-  //   $user = null;
+    $user = null;
 
-  //   if(count($results) > 0){
-  //     $user = $results;
-  //   }
-  // }
+    if(count($results) > 0){
+      $user = $results;
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
       </button>
     </div>
 
-    <div>
+    <!-- <div>
       <?php if(empty($user)) : ?>
         <div class="btn" style="background: #3D464D; margin-top:1%; margin-left:1%;">
           <a href="views/logout.php" style="text-decoration:none; color:white;">cerrar sesión</a>
@@ -60,7 +60,7 @@
           <a href="login.php" style="text-decoration:none; color:white;">Administrar</a>
         </div>         
       <?php endif; ?>
-    </div>
+    </div> -->
 
     <div class="container" style="margin-top:3%; margin-bottom:3%;">
       <div style="display:flex;">

@@ -22,6 +22,10 @@
 
     session_start();
 
+    if(isset($_SESSION['user_id'])){
+        header('location: /BD/index.php');
+    }
+
     if(!empty($_POST["Nombre"]) && !empty($_POST["Apellido"]) && !empty($_POST["password"])){
 
         $records = $conn->prepare('SELECT * FROM empleados WHERE nombre_empleado = :nombre AND apellido_empleado = :apellido AND dni_empleado = :clave');

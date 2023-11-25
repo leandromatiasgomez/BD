@@ -5,7 +5,7 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th class="encabezado">Carrera</th>
+                <th class="encabezado">Carrera (Hacer click para más información)</th>
                 <th class="encabezado">Tipo de carrera</th>
             </tr>
         </thead>
